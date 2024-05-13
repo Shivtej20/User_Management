@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>User Management Register view</title>
+</head>
+
+<body>
+	<div class="container">
+		<form action="@{/register}" th:object="${registerDto}" method="post">
+
+			<font color="green">
+				<p th:text="${smsg}"></p>
+			</font>
+			<font color="red">
+				<p th:text="${emsg}"></p>
+			</font>
+
+			<table>
+				<tr>
+					<td>Name :</td>
+					<td><input type="text" th:field="*{uName}" </td>
+				</tr>
+				<tr>
+					<td>Email :</td>
+					<td><input type="email" th:field="*{email}" </td>
+				</tr>
+				<tr>
+					<td>Phone Number :</td>
+					<td><input type="tel" th:field="*{phno}" </td>
+				</tr>
+				<tr>
+					<td>Country :</td>
+					<td><input type="number" th:field="*{cID}" </td>
+				</tr>
+				<tr>
+					<td>State :</td>
+					<td><input type="number" th:field="*{sID}" </td>
+				</tr>
+				<tr>
+					<td>City :</td>
+					<td><input type="number" th:field="*{ctID}" </td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" value="Submit" class="btn btn-primary" </td>
+				</tr>
+			</table>
+
+		</form>
+		<a href="/">Already have account? Login Here</a>
+	</div>
+</body>
+
+</html>

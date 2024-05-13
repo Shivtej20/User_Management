@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>User Management Register view</title>
+</head>
+
+<body>
+	<div class="container">
+		<form action="@{/login}" th:object="${loginDto}" method="post">
+
+			<font color="green">
+				<p th:text="${smsg}"></p>
+			</font>
+			<font color="red">
+				<p th:text="${emsg}"></p>
+			</font>
+
+			<table>
+				<tr>
+					<td>Email :</td>
+					<td><input type="text" th:field="*{email}" ></td>
+				</tr>
+				<tr>
+					<td>Password :</td>
+					<td><input type="password" th:field="*{pwd}" </td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" value="Login" class="btn btn-primary" </td>
+				</tr>
+			</table>
+
+		</form>
+		<a href="register">Don't have account? Register Here</a>
+	</div>
+</body>
+
+</html>
